@@ -1,10 +1,9 @@
+#[macro_use]
 extern crate clap;
-use clap::App;
+use clap::{App};
 
 fn main() { 
-    App::new("mypipe")
-       .version("1.0")
-       .about("Does great things!")
-       .author("Maxime D.")
-       .get_matches(); 
+    let yaml = load_yaml!("../configs/main.yml");
+    let matches = App::from_yaml(yaml).get_matches(); 
 }
+
