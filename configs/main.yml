@@ -2,3 +2,18 @@ name: mypipe
 version: "1.0"
 author: Maxime D. <maxime.deboffle@hotmail.com>
 about: Never give up!
+args:
+  - in:
+      short: i
+      long: in
+      value_name: input
+      help: input_parameter
+      takes_value: true
+      required: true
+  - out:
+      short: o
+      long: out
+      value_name: output
+      help: output_parameter
+      takes_value: true
+      required: true
